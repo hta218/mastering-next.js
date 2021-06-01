@@ -2,11 +2,16 @@ import styles from '../styles/Dashboard.module.scss'
 
 const Dashboard = ({ name, bio, blog }) => {
 	return (
-		<div className={styles.dashboard}>
+		<div className={`${styles.dashboard} styled-jsx-dashboard`}>
 			<h1>Dashboard</h1>
 			<h3 className={styles.title}>{name}</h3>
 			<p>{`Bio: ${bio}`}</p>
 			<p>{`Blog: ${blog}`}</p>
+			<style jsx>{`
+				.styled-jsx-dashboard:hover {
+					background-color: gray;
+				}
+			`}</style>
 		</div>
 	)
 }
