@@ -1,11 +1,18 @@
 import styles from '../styles/Dashboard.module.scss'
+import styled from 'styled-components'
+
+const Bio = styled.p`
+	font-weight: bold;
+	font-size: 2em;
+	color: ${({ theme }) => theme.colors.primary}
+`
 
 const Dashboard = ({ name, bio, blog }) => {
 	return (
 		<div className={`${styles.dashboard} styled-jsx-dashboard`}>
 			<h1>Dashboard</h1>
 			<h3 className={styles.title}>{name}</h3>
-			<p>{`Bio: ${bio}`}</p>
+			<Bio>{`Bio: ${bio}`}</Bio>
 			<p>{`Blog: ${blog}`}</p>
 			<style jsx>{`
 				.styled-jsx-dashboard:hover {
