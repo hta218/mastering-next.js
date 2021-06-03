@@ -11,6 +11,7 @@ const Dashboard = ({ name, bio, blog }) => {
 	return (
 		<div className={`${styles.dashboard} styled-jsx-dashboard`}>
 			<h1>Dashboard</h1>
+
 			<h3 className={styles.title}>{name}</h3>
 			<Bio>{`Bio: ${bio}`}</Bio>
 			<p>{`Blog: ${blog}`}</p>
